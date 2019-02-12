@@ -11,3 +11,12 @@ let findLongestWordLength = (str) => {
 }
 
 findLongestWordLength("The quick brown fox jumped over the lazy dog");
+
+
+let findLongestWordLengthReduce = (str) => {
+  let newStr = str.split(' ')
+  let longest = newStr.reduce((prevWord, currentWord) => prevWord.length > currentWord.length ? prevWord : currentWord)
+  console.log('with reduce ' + longest.length)
+}
+
+findLongestWordLengthReduce("The quick brown fox jumped over the lazy dog");
